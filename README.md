@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 # Spck
 
 Hello GitSync
+
+Hi Hello World 
 =======
 # Spck
->>>>>>> origin/main
