@@ -1,0 +1,18 @@
+# Obsidian settings and plugins
+.obsidian/workspace*
+.obsidian/plugins/
+.obsidian/github-sync.log
+.obsidian/github-sync-metadata.json
+
+# Trash, attachments, large images
+.trash/
+*.jpg
+*.png
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary / editor files
+*~ 
+*.swp
