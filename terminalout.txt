@@ -1,0 +1,338 @@
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git merge origin/main --allow-unrelated-histories
+Auto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+diff --cc README.md
+index 24b8588,00da3d9..0000000
+--- a/README.md                                  +++ b/README.md
+@@@ -1,3 -1,1 +1,7 @@@
+ -# Spck
+++<<<<<<< HEAD
+ +# Spck                                          +
+- Hello GitSync
+++Hello GitSync
+++=======
+++# Spck
+++>>>>>>> origin/main
+diff --cc Readme2.md
+index 21603b0,8e27be7..0000000
+--- a/Readme2.md
++++ b/Readme2.md
+@@@ -1,2 -1,1 +1,5 @@@
+  text
+- Created the text                               ++<<<<<<< HEAD
+++Created the text
+++=======
+++>>>>>>> origin/main
+~
+~
+~
++++ b/README.md
+@@@ -1,3 -1,1 +1,7 @@@
+ -# Spck
+++<<<<<<< HEAD
+ +# Spck
+ +
+- Hello GitSync
+++Hello GitSync
+++=======
+++# Spck
+++>>>>>>> origin/main
+diff --cc Readme2.md
+index 21603b0,8e27be7..0000000
+--- a/Readme2.md
++++ b/Readme2.md
+@@@ -1,2 -1,1 +1,5 @@@
+  text
+- Created the text
+++<<<<<<< HEAD
+++Created the text
+++=======
+++>>>>>>> origin/main
+
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git diff --staged
+* Unmerged path README.md
+* Unmerged path Readme2.md
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git add .
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git commit
+hint: Waiting for your editor to close the file..[master 7189d58] Merge remote-tracking branch 'origin/main'
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git commit -m "test work git"
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 5 and 2 different commits each, respectively.
+
+nothing to commit, working tree clean
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git log --online --graph --decorate
+fatal: unrecognized argument: --online
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git log --oneline --graph --decorate
+*   7189d58 (HEAD -> master) Merge remote-tracking branch 'origin/main'
+|\
+| * 348eb98 (origin/main, origin/HEAD) Rename Readme2 to Readme2.md
+| * d91d8fb Add initial content to Readme2
+| * 4d16fd2 Create Newfile
+| * 1a22bd3 Initial commit
+* 9ebc538 Remove ignored files and add .gitignore
+* 418a71c Test commit send
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git branch
+* master
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git branch -a
+* master
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/master
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git remote -v
+origin  git@github.com:Livesin/Spck.git (fetch)
+origin  git@github.com:Livesin/Spck.git (push)
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git fetch origin
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git push origin master
+To github.com:Livesin/Spck.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:Livesin/Spck.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git pull origin main
+From github.com:Livesin/Spck
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git push origin master
+To github.com:Livesin/Spck.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:Livesin/Spck.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git pull --rebase origin main
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git commit -m "test work git 2"
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 5 and 2 different commits each, respectively.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git pull origin main
+From github.com:Livesin/Spck
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git push origin master
+To github.com:Livesin/Spck.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:Livesin/Spck.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:Livesin/Spck.git'
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git push -u origin master
+To github.com:Livesin/Spck.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:Livesin/Spck.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git push --force origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:Livesin/Spck.git'
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git push --force origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 454 bytes | 75.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Livesin/Spck.git
+ + 14d6db4...7189d58 master -> master (forced update)
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git ls-files
+.gitignore
+.obsidian/app.json
+.obsidian/appearance.json
+.obsidian/community-plugins.json
+.obsidian/core-plugins.json
+.obsidian/github-sync-metadata.json
+.obsidian/github-sync.log
+.obsidian/plugins/github-gitless-sync/main.js
+.obsidian/plugins/github-gitless-sync/manifest.json
+.obsidian/plugins/github-gitless-sync/styles.css
+.obsidian/plugins/gitsync-portal/data.json
+.obsidian/plugins/gitsync-portal/local-sync-state.json
+.obsidian/plugins/gitsync-portal/main.js
+.obsidian/plugins/gitsync-portal/manifest.json
+.obsidian/plugins/gitsync-portal/styles.css
+.obsidian/plugins/gitsync-portal/sync-state.json
+.obsidian/plugins/obsidian-git/data.json
+.obsidian/plugins/obsidian-git/main.js
+.obsidian/plugins/obsidian-git/manifest.json
+.obsidian/plugins/obsidian-git/styles.css
+.obsidian/workspace-mobile.json
+.trash/1000000236 1.jpg
+.trash/1000000236.jpg
+".trash/\320\221\320\265\320\267 \320\275\320\260\320\267\320\262\320\260\320\275\320\270\321\217 1.md"
+new file mode 100644                             index 0000000..cff9dd7                           --- /dev/null
++++ b/.gitignore                                 @@ -0,0 +1,18 @@                                 +# Obsidian settings and plugins^M
++.obsidian/workspace*^M                          +.obsidian/plugins/^M                            +.obsidian/github-sync.log^M
++.obsidian/github-sync-metadata.json^M           +^M                                              +# Trash, attachments, large images^M
++.trash/^M                                       +*.jpg^M                                         +*.png^M
++^M                                              +# System files^M                                +.DS_Store^M
++Thumbs.db^M
++^M
++# Temporary / editor files^M
++*~ ^M
++*.swp                                           \ No newline at end of file
+diff --git a/.obsidian/app.json b/.obsidian/app.jnew file mode 100644
+index 0000000..cff9dd7
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,18 @@
++# Obsidian settings and plugins^M
++.obsidian/workspace*^M
++.obsidian/plugins/^M
++.obsidian/github-sync.log^M                     +.obsidian/github-sync-metadata.json^M
++^M
++# Trash, attachments, large images^M
++.trash/^M
++*.jpg^M
++*.png^M
++^M
++# System files^M
++.DS_Store^M                                     +Thumbs.db^M
++^M
++# Temporary / editor files^M
++*~ ^M
++*.swp
+\ No newline at end of file
+diff --git a/.obsidian/app.json b/.obsidian/app.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/.obsidian/app.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/.obsidian/appearance.json b/.obsidian/appearance.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/.obsidian/appearance.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/.obsidian/community-plugins.json b/.obsidian/community-plugins.json
+new file mode 100644
+index 0000000..21ed484
+--- /dev/null
++++ b/.obsidian/community-plugins.json
+@@ -0,0 +1,5 @@
++[
++  "github-gitless-sync",
++  "obsidian-git",
++  "gitsync-portal"
++]
+\ No newline at end of file
+diff --git a/.obsidian/core-plugins.json b/.obsidian/core-plugins.json
+new file mode 100644
+index 0000000..3f2ab43
+--- /dev/null
++++ b/.obsidian/core-plugins.json
+@@ -0,0 +1,32 @@
++{
++  "file-explorer": true,
++  "global-search": true,
++  "switcher": true,
++  "graph": true,
++  "backlink": true,
++  "canvas": true,
++  "outgoing-link": true,
++  "tag-pane": true,
++  "footnotes": false,
++  "properties": true,
++  "page-preview": true,
++  "daily-notes": true,
++  "templates": true,
++  "note-composer": true,
++  "command-palette": true,
++  "slash-command": false,
++  "editor-status": true,
++  "bookmarks": true,
++  "markdown-importer": false,
++  "zk-prefixer": false,
++  "random-note": false,
++  "outline": true,
++  "word-count": true,
++  "slides": false,
++  "audio-recorder": false,
++  "workspaces": false,
++  "file-recovery": true,
++  "publish": false,
++  "sync": true,
++  "bases": true
++}
+\ No newline at end of file
+diff --git a/.obsidian/github-sync-metadata.json b/.obsidian/github-sync-metadata.json
+new file mode 100644
+index 0000000..ecb2233
+--- /dev/null
++++ b/.obsidian/github-sync-metadata.json
+@@ -0,0 +1 @@
++{"lastSync":0,"files":{".obsidian/github-sync-metadata.json":{"path":".obsidian/github-sync-metadata.json","sha":null,"dirty":false,"justDownloaded":false,"lastModified":1787376656583},"Без названия.md":{"path":"Без названия.md","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787525012736,"deleted":true,"deletedAt":1787529050495},"Без названия 1.md":{"path":"Без названия 1.md","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787377153040,"deleted":true,"deletedAt":1787377566722},"Без названия 2.md":{"path":"Без названия 2.md","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787377223775,"deleted":true,"deletedAt":1787377543649},"1000000236.jpg":{"path":"1000000236.jpg","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787377221745,"deleted":true,"deletedAt":1787377548464},"Без названия 3.md":{"path":"Без названия 3.md","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787377325620,"deleted":true,"deletedAt":1787377513335},"1000000236 1.jpg":{"path":"1000000236 1.jpg","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787377323581,"deleted":true,"deletedAt":1787377526641},"Без названия 4.md":{"path":"Без названия 4.md","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787377383207,"deleted":true,"deletedAt":1787377504393},"Без названия 5.md":{"path":"Без названия 5.md","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787377395353,"deleted":true,"deletedAt":1787377498147},"Newfile":{"path":"Newfile","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787528618849},"README.md":{"path":"README.md","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787528798623},"Readme2.md":{"path":"Readme2.md","sha":null,"dirty":true,"justDownloaded":false,"lastModified":1787529597958}}}
+\ No newline at end of file
+diff --git a/.obsidian/github-sync.log b/.obsidian/github-sync.log
+new file mode 100644
+index 0000000..e69de29
+diff --git a/.obsidian/plugins/github-gitless-sync/main.js b/.obsidian/plugins/github-gitless-sync/main.js
+new file mode 100644
+index 0000000..138f225
+--- /dev/null
++++ b/.obsidian/plugins/github-gitless-sync/main.js
+@@ -0,0 +1,123 @@
++/*
++THIS IS A GENERATED/BUNDLED FILE BY ESBUILD
++if you want to view the source, please visit the github repository of this plugin
++*/
++
++var $_=Object.create;var Ds=Object.defineProperty;var k_=Object.getOwnPropertyDescriptor;var A_=Object.getOwnPropertyNames;var P_=Object.getPrototypeOf,X_=Object.prototype.hasOwnProperty;var bn=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),np=(e,t)=>{for(var n in t)Ds(e,n,{get:t[n],enumerable:!0})},Cs=(e,t,n,a)=>{if(t&&typeof t=="object"||typeof t=="function")for(let i of A_(t))!X_.call(e,i)&&i!==n&&Ds(e,i,{get:()=>t[i],enumerable:!(a=k_(t,i))||a.enumerable});return e},re=(e,t,n)=>(Cs(e,t,"default"),n&&Cs(n,t,"default")),te=(e,t,n)=>(n=e!=null?$_(P_(e)):{},Cs(t||!e||!e.__esModule?Ds(n,"default",{value:e,enumerable:!0}):n,e)),C_=e=>Cs(Ds({},"__esModule",{value:!0}),e);var Om=bn(de=>{"use strict";function yf(e,t){var n=e.length;e.push(t);e:for(;0<n;){var a=n-1>>>1,i=e[a];if(0<vo(i,t))e[a]=t,e[n]=i,n=a;else break e}}function fn(e){return e.length===0?null:e[0]}function wo(e){if(e.length===0)return null;var t=e[0],n=e.pop();if(n!==t){e[0]=n;e:for(var a=0,i=e.length,l=i>>>1;a<l;){var r=2*(a+1)-1,s=e[r],o=r+1,c=e[o];if(0>vo(s,n))o<i&&0>vo(c,s)?(e[a]=c,e[o]=n,a=o):(e[a]=s,e[r]=n,a=r);else if(o<i&&0>vo(c,n))e[a]=c,e[o]=n,a=o;else break e}}return t}function vo(e,t){var n=e.sortIndex-t.sortIndex;return n!==0?n:e.id-t.id}de.unstable_now=void 0;typeof performance=="object"&&typeof performance.now=="function"?(am=performance,de.unstable_now=function(){return am.now()}):(pf=Date,im=pf.now(),de.unstable_now=function(){return pf.now()-im});var am,pf,im,Rn=[],va=[],ux=1,jt=null,rt=3,xo=!1,ai=!1,Or=!1,sm=typeof setTimeout=="function"?setTimeout:null,om=typeof clearTimeout=="function"?clearTimeout:null,lm=typeof setImmediate!="undefined"?setImmediate:null;function _o(e){for(var t=fn(va);t!==null;){if(t.callback===null)wo(va);else if(t.startTime<=e)wo(va),t.sortIndex=t.expirationTime,yf(Rn,t);else break;t=fn(va)}}function bf(e){if(Or=!1,_o(e),!ai)if(fn(Rn)!==null)ai=!0,Sf();else{var t=fn(va);t!==null&&vf(bf,t.startTime-e)}}var Qo=!1,dr=-1,cm=5,um=-1;function fm(){return!(de.unstable_now()-um<cm)}function mf(){if(Qo){var e=de.unstable_now();um=e;var t=!0;try{e:{ai=!1,Or&&(Or=!1,om(dr),dr=-1),xo=!0;var n=rt;try{t:{for(_o(e),jt=fn(Rn);jt!==null&&!(jt.expirationTime>e&&fm());){var a=jt.callback;if(typeof a=="function"){jt.callback=null,rt=jt.priorityLevel;var i=a(jt.expirationTime<=e);if(e=de.unstable_now(),typeof i=="function"){jt.callback=i,_o(e),t=!0;break t}jt===fn(Rn)&&wo(Rn),_o(e)}else wo(Rn);jt=fn(Rn)}if(jt!==null)t=!0;else{var l=fn(va);l!==null&&vf(bf,l.startTime-e),t=!1}}break e}finally{jt=null,rt=n,xo=!1}t=void 0}}finally{t?fr():Qo=!1}}}var fr;typeof lm=="function"?fr=function(){lm(mf)}:typeof MessageChannel!="undefined"?(gf=new MessageChannel,rm=gf.port2,gf.port1.onmessage=mf,fr=function(){rm.postMessage(null)}):fr=function(){sm(mf,0)};var gf,rm;function Sf(){Qo||(Qo=!0,fr())}function vf(e,t){dr=sm(function(){e(de.unstable_now())},t)}de.unstable_IdlePriority=5;de.unstable_ImmediatePriority=1;de.unstable_LowPriority=4;de.unstable_NormalPriority=3;de.unstable_Profiling=null;de.unstable_UserBlockingPriority=2;de.unstable_cancelCallback=function(e){e.callback=null};de.unstable_continueExecution=function(){ai||xo||(ai=!0,Sf())};de.unstable_forceFrameRate=function(e){0>e||125<e?console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"):cm=0<e?Math.floor(1e3/e):5};de.unstable_getCurrentPriorityLevel=function(){return rt};de.unstable_getFirstCallbackNode=function(){return fn(Rn)};de.unstable_next=function(e){switch(rt){case 1:case 2:case 3:var t=3;break;default:t=rt}var n=rt;rt=t;try{return e()}finally{rt=n}};de.unstable_pauseExecution=function(){};de.unstable_requestPaint=function(){};de.unstable_runWithPriority=function(e,t){switch(e){case 1:case 2:case 3:case 4:case 5:break;default:e=3}var n=rt;rt=e;try{return t()}finally{rt=n}};de.unstable_scheduleCallback=function(e,t,n){var a=de.unstable_now();switch(typeof n=="object"&&n!==null?(n=n.delay,n=typeof n=="number"&&0<n?a+n:a):n=a,e){case 1:var i=-1;break;case 2:i=250;break;case 5:i=1073741823;break;case 4:i=1e4;break;default:i=5e3}return i=n+i,e={id:ux++,callback:t,priorityLevel:e,startTime:n,expirationTime:i,sortIndex:-1},n>a?(e.sortIndex=n,yf(va,e),fn(Rn)===null&&e===fn(va)&&(Or?(om(dr),dr=-1):Or=!0,vf(bf,n-a))):(e.sortIndex=i,yf(Rn,e),ai||xo||(ai=!0,Sf())),e};de.unstable_shouldYield=fm;de.unstable_wrapCallback=function(e){var t=rt;return function(){var n=rt;rt=t;try{return e.apply(this,arguments)}finally{rt=n}}}});var hm=bn((M3,dm)=>{"use strict";dm.exports=Om()});var Em=bn(F=>{"use strict";var wf=Symbol.for("react.transitional.element"),fx=Symbol.for("react.portal"),Ox=Symbol.for("react.fragment"),dx=Symbol.for("react.strict_mode"),hx=Symbol.for("react.profiler"),px=Symbol.for("react.consumer"),mx=Symbol.for("react.context"),gx=Symbol.for("react.forward_ref"),yx=Symbol.for("react.suspense"),bx=Symbol.for("react.memo"),Sm=Symbol.for("react.lazy"),pm=Symbol.iterator;function Sx(e){return e===null||typeof e!="object"?null:(e=pm&&e[pm]||e["@@iterator"],typeof e=="function"?e:null)}var vm={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},_m=Object.assign,wm={};function Ni(e,t,n){this.props=e,this.context=t,this.refs=wm,this.updater=n||vm}Ni.prototype.isReactComponent={};Ni.prototype.setState=function(e,t){if(typeof e!="object"&&typeof e!="function"&&e!=null)throw Error("takes an object of state variables to update or a function which returns an object of state variables.");this.updater.enqueueSetState(this,e,t,"setState")};Ni.prototype.forceUpdate=function(e){this.updater.enqueueForceUpdate(this,e,"forceUpdate")};function xm(){}xm.prototype=Ni.prototype;function xf(e,t,n){this.props=e,this.context=t,this.refs=wm,this.updater=n||vm}var Qf=xf.prototype=new xm;Qf.constructor=xf;_m(Qf,Ni.prototype);Qf.isPureReactComponent=!0;var mm=Array.isArray,Te={H:null,A:null,T:null,S:null},Qm=Object.prototype.hasOwnProperty;function Ef(e,t,n,a,i,l){return n=l.ref,{$$typeof:wf,type:e,key:t,ref:n!==void 0?n:null,props:l}}function vx(e,t){return Ef(e.type,t,void 0,void 0,void 0,e.props)}function Rf(e){return typeof e=="object"&&e!==null&&e.$$typeof===wf}function _x(e){var t={"=":"=0",":":"=2"};return"$"+e.replace(/[=:]/g,function(n){return t[n]})}var gm=/\/+/g;function _f(e,t){return typeof e=="object"&&e!==null&&e.key!=null?_x(""+e.key):t.toString(36)}function ym(){}function wx(e){switch(e.status){case"fulfilled":return e.value;case"rejected":throw e.reason;default:switch(typeof e.status=="string"?e.then(ym,ym):(e.status="pending",e.then(function(t){e.status==="pending"&&(e.status="fulfilled",e.value=t)},function(t){e.status==="pending"&&(e.status="rejected",e.reason=t)})),e.status){case"fulfilled":return e.value;case"rejected":throw e.reason}}throw e}function qi(e,t,n,a,i){var l=typeof e;(l==="undefined"||l==="boolean")&&(e=null);var r=!1;if(e===null)r=!0;else switch(l){case"bigint":case"string":case"number":r=!0;break;case"object":switch(e.$$typeof){case wf:case fx:r=!0;break;case Sm:return r=e._init,qi(r(e._payload),t,n,a,i)}}if(r)return i=i(e),r=a===""?"."+_f(e,0):a,mm(i)?(n="",r!=null&&(n=r.replace(gm,"$&/")+"/"),qi(i,t,n,"",function(c){return c})):i!=null&&(Rf(i)&&(i=vx(i,n+(i.key==null||e&&e.key===i.key?"":(""+i.key).replace(gm,"$&/")+"/")+r)),t.push(i)),1;r=0;var s=a===""?".":a+":";if(mm(e))for(var o=0;o<e.length;o++)a=e[o],l=s+_f(a,o),r+=qi(a,t,n,l,i);else if(o=Sx(e),typeof o=="function")for(e=o.call(e),o=0;!(a=e.next()).done;)a=a.value,l=s+_f(a,o++),r+=qi(a,t,n,l,i);else if(l==="object"){if(typeof e.then=="function")return qi(wx(e),t,n,a,i);throw t=String(e),Error("Objects are not valid as a React child (found: "+(t==="[object Object]"?"object with keys {"+Object.keys(e).join(", ")+"}":t)+"). If you meant to render a collection of children, use an array instead.")}return r}function Eo(e,t,n){if(e==null)return e;var a=[],i=0;return qi(e,a,"","",function(l){return t.call(n,l,i++)}),a}function xx(e){if(e._status===-1){var t=e._result;t=t(),t.then(function(n){(e._status===0||e._status===-1)&&(e._status=1,e._result=n)},function(n){(e._status===0||e._status===-1)&&(e._status=2,e._result=n)}),e._status===-1&&(e._status=0,e._result=t)}if(e._status===1)return e._result.default;throw e._result}var bm=typeof reportError=="function"?reportError:function(e){if(typeof window=="object"&&typeof window.ErrorEvent=="function"){var t=new window.ErrorEvent("error",{bubbles:!0,cancelable:!0,message:typeof e=="object"&&e!==null&&typeof e.message=="string"?String(e.message):String(e),error:e});if(!window.dispatchEvent(t))return}else if(typeof process=="object"&&typeof process.emit=="function"){process.emit("uncaughtException",e);return}console.error(e)};function Qx(){}F.Children={map:Eo,forEach:function(e,t,n){Eo(e,function(){t.apply(this,arguments)},n)},count:function(e){var t=0;return Eo(e,function(){t++}),t},toArray:function(e){return Eo(e,function(t){return t})||[]},only:function(e){if(!Rf(e))throw Error("React.Children.only expected to receive a single React element child.");return e}};F.Component=Ni;F.Fragment=Ox;F.Profiler=hx;F.PureComponent=xf;F.StrictMode=dx;F.Suspense=yx;F.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=Te;F.act=function(){throw Error("act(...) is not supported in production builds of React.")};F.cache=function(e){return function(){return e.apply(null,arguments)}};F.cloneElement=function(e,t,n){if(e==null)throw Error("The argument must be a React element, but you passed "+e+".");var a=_m({},e.props),i=e.key,l=void 0;if(t!=null)for(r in t.ref!==void 0&&(l=void 0),t.key!==void 0&&(i=""+t.key),t)!Qm.call(t,r)||r==="key"||r==="__self"||r==="__source"||r==="ref"&&t.ref===void 0||(a[r]=t[r]);var r=arguments.length-2;if(r===1)a.children=n;else if(1<r){for(var s=Array(r),o=0;o<r;o++)s[o]=arguments[o+2];a.children=s}return Ef(e.type,i,void 0,void 0,l,a)};F.createContex.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git fetch --all
+.../Documents/ObsidianStore $
+.../Documents/ObsidianStore $ git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+  origin/master
+.../Documents/ObsidianStore $
